@@ -1,0 +1,37 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+</div>
+
+<div class="container">
+      <p>
+      <strong>Item:</strong>
+      <%= @invoice.item %>
+    </p>
+
+    <p>
+      <strong>Quantity:</strong>
+      <%= @invoice.quantity %>
+    </p>
+
+    <p>
+      <strong>Price:</strong>
+      <%= @invoice.price %>
+    </p>
+
+    <p>
+      <strong>Taxrate:</strong>
+      <%= @invoice.taxrate %>
+    </p>
+
+    <p>
+      <strong>Amount:</strong>
+      <%= @invoice.amount %>
+    </p>
+
+</div>
+
+<div class = "container">
+  <%= link_to 'Edit', edit_invoice_path(@invoice) ,class: "btn btn-link"  %> |
+  <%= link_to 'Back', invoices_path ,class: "btn btn-link"  %>
+</div>
+

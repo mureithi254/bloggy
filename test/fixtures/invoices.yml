@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item: MyText
+  quantity: 1
+  price: 1
+  taxrate: 1.5
+  amount: 1
+
+two:
+  item: MyText
+  quantity: 1
+  price: 1
+  taxrate: 1.5
+  amount: 1

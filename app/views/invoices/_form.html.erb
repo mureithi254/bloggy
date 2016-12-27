@@ -1,0 +1,61 @@
+<div class="container">
+    <%= form_for invoice, html: { class: 'form-horizontal' } do |f| %>
+      <% if invoice.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(invoice.errors.count, "error") %> prohibited this invoice from being saved:</h2>
+
+          <ul>
+          <% invoice.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+       <fieldset>
+          <legend>Edit Invoice</legend>
+            <div class="form-group">
+              <%= f.label :item ,"Item:" , class: 'col-md-4 control-label'%>
+              <div class="col-md-8">
+               <%= f.text_area :item ,class: "form-control"%>
+              </div>
+            </div>
+
+          <div class="form-group">
+            <%= f.label :quantity,"Quantity:", class: 'col-md-4 control-label' %>
+             <div class="col-md-8">
+               <%= f.number_field :quantity ,class: "form-control" %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :price,"Price", class: 'col-md-4 control-label' %>
+             <div class="col-md-8">
+               <%= f.number_field :price ,class: "form-control" %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :taxrate,"TaxRate", class: 'col-md-4 control-label' %>
+             <div class="col-md-8">
+               <%= f.text_field :taxrate ,class: "form-control" %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :amount,"Amount", class: 'col-md-4 control-label' %>
+             <div class="col-md-8">
+               <%= f.number_field :amount ,class: "form-control" %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="controls">
+              <%= f.submit 'Submit', class: 'form control btn btn-default' %>
+            </div>
+          </div>
+       </fieldset>
+
+             
+    <% end %>
+
+</div>
